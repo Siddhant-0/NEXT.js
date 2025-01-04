@@ -1,0 +1,32 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+@layer utilities {
+  .auth-form {
+    @apply flex flex-col justify-center items-center w-[400px] shadow-2xl
+    shadow-slate-500 px-8 py-4  rounded-md gap-4;
+  }
+
+  .card-center {
+    @apply flex flex-row flex-wrap gap-8 justify-center items-center my-12;
+  }
+}
